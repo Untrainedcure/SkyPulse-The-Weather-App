@@ -3,7 +3,7 @@
 SkyPulse is a beautiful, feature-rich weather app that provides real-time weather conditions, 5-day forecasts, voice-based search, location detection, and stunning UI animations. Built using HTML, CSS, and JavaScript with data from the OpenWeatherMap API.
 
 > 🚀 **Live Demo**: [https://your-username.github.io/SkyPulse-Weather-App](https://your-username.github.io/SkyPulse-Weather-App)  
-> 🌐 **Vercel Deployment**: [https://skypulse.vercel.app](https://skypulse.vercel.app)
+> 🌐 **Vercel Deployment**:[(https://skypulse-sigma.vercel.app/)]
 
 ---
 
