@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkyPulse - The Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+ 
+
+  <div class="container">
+    <h1 onclick="goHome()" style="cursor:pointer;">SkyPulse</h1>
+
+    <div class="search-row">
+      <input type="text" id="cityInput" placeholder="Explore weather worldwide..." />
+      <button onclick="getWeather()">Check Weather</button>
+      <button onclick="startVoiceSearch()" title="Voice Search"><i class="fas fa-microphone"></i></button>
+    </div>
+    
+<button class="btn-primary" onclick="getWeatherByLocation()">🌦️ Weather at My Spot</button>
+
+
+
+    <div id="loader" class="loader" style="display:none;"></div>
+
+    <div class="map-container" id="windyEmbed">
+      <iframe
+        id="radarMap"
+        width="100%"
+        height="200"
+        frameborder="0"
+        allowfullscreen
+        src="https://embed.windy.com/embed2.html?lat=22.57&lon=88.36&detailLat=22.57&detailLon=88.36&width=100%&height=200&zoom=6&type=radar&menu=false&message=true&marker=true"
+      ></iframe>
+    </div>
+    <div id="windyEmbed" style="display:none;">
+  <iframe id="radarMap" width="100%" height="350" frameborder="0"></iframe>
+</div>
+
+    <div class="favorites">
+      <p>Favorites: <span id="favoriteList"></span></p>
+    </div>
+
+    <div class="weather-info" id="weatherInfo" style="display: none;">
+        <div id="aqiPanel" class="card-style" style="display:none;">
+  <h3>Air Quality Index</h3>
+  <p id="aqiValue"></p>
+  <p id="aqiTips"></p>
+</div>
+
+      <h2 id="location"></h2>
+      <div class="weather-main">
+        <i id="weatherIcon" class="wi"></i>
+        <p id="description"></p>
+      </div>
+      <div class="weather-details">
+        <div class="info-card"><i class="fas fa-thermometer-half"></i><p id="temperature"></p></div>
+        <div class="info-card"><i class="fas fa-tint"></i><p id="humidity"></p></div>
+        <div class="info-card"><i class="fas fa-wind"></i><p id="wind"></p></div>
+      </div>
+    </div>
+
+    <div class="forecast" id="forecast" style="display: none;"></div>
+    <div class="alerts" id="alerts" style="display: none;"></div>
+  </div>
+
+  <div class="caption-box" id="captionBox">Welcome to SkyPulse! 🌤️</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
